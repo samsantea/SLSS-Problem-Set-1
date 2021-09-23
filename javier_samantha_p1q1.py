@@ -9,10 +9,10 @@ import time
 # The quiz_score variable will store the user's points.
 quiz_score = 0
 
-# Greet the user and get the user's name
+# Greet the user and get the user's name.
 name = input(f"Good day! I'm the BTS quiz bot. What's your name?\n")
 
-# Introduce the quiz
+# Introduce the quiz.
 print(f"Hello, {name}! I'm going to ask you a few questions about BTS today.\n")
 
 # Ask if the user is ready to start the quiz.
@@ -26,7 +26,7 @@ else:
     run_quiz = False
     print("Okay, see you later!")
 
-# If the run quiz variable is true, the quiz will begin.
+# If the run quiz variable is True, the quiz will begin.
 while run_quiz:
     print("Question #1!")
     # Ask the question and create a variable to store the user's answer
@@ -53,8 +53,9 @@ while run_quiz:
         print("Nope. If you didn't know already, he's one of the vocalists!")
 
     print("Question #3!")
-    # Ask the question and create a variable to store the user's answer
-    print("""What is the most recent song BTS released? Choose one of the letters below:
+    # Ask the question and create a variable to store the user's answer.
+    # This is a multiple choice question, so let the user know to type one of the letters to answer.
+    print("""What is the most recent song BTS released? Type one of the letters below:
     A: Butter
     B: Boy With Luv
     C: Permission to Dance
@@ -112,4 +113,5 @@ while run_quiz:
         print("At least you tried...")
     else:
         print("Do you even know who BTS is?")
+    # End the run_quiz loop to finish the quiz and stop it from looping.
     run_quiz = False
