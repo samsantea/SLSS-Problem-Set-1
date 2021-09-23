@@ -54,9 +54,15 @@ while run_quiz:
 
     print("Question #3!")
     # Ask the question and create a variable to store the user's answer
-    recent_song_answer = input("What is the most recent song BTS released?\n")
+    print("""What is the most recent song BTS released? Choose one of the letters below:
+    A: Butter
+    B: Boy With Luv
+    C: Permission to Dance
+    D: Dynamite""")
 
-    if recent_song_answer.lower() == "permission to dance":
+    recent_song_answer = input()
+
+    if recent_song_answer.lower() == "c":
         # if the user's answer is correct, let him/her know and add a point to the quiz score.
         print("You got it!")
         # Else, let the user know the answer was wrong.
@@ -76,7 +82,7 @@ while run_quiz:
     else:
         print("No...")
 
-    print("Final question!")
+    print("Question #5. This is the final question!")
     # Ask the question and create a variable to store the user's answer
     name_meaning_answer = input("Finally, what is the English translation of BTS' full name?\n")
 
