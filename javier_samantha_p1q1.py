@@ -46,11 +46,11 @@ while run_quiz:
 
     if youngest_answer.lower() == "jungkook":
         # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("Correct!")
+        print("You're right!")
         # Else, let the user know the answer was wrong.
         quiz_score += 1
     else:
-        print("Incorrect.")
+        print("Nope. If you didn't know already, he's one of the vocalists!")
 
     print("Question #3!")
     # Ask the question and create a variable to store the user's answer
@@ -58,11 +58,11 @@ while run_quiz:
 
     if recent_song_answer.lower() == "permission to dance":
         # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("Correct!")
+        print("You got it!")
         # Else, let the user know the answer was wrong.
         quiz_score += 1
     else:
-        print("Incorrect.")
+        print("Sorry, that's not it.")
 
     print("Question #4!")
     # Ask the question and create a variable to store the user's answer
@@ -70,11 +70,11 @@ while run_quiz:
 
     if members_count_answer == "7":
         # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("Correct!")
+        print("Yes!")
         # Else, let the user know the answer was wrong.
         quiz_score += 1
     else:
-        print("Incorrect.")
+        print("No...")
 
     print("Final question!")
     # Ask the question and create a variable to store the user's answer
@@ -82,16 +82,16 @@ while run_quiz:
 
     if name_meaning_answer.lower() == "bulletproof boy scouts":
         # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("Correct!")
+        print("Exactly!")
         # Else, let the user know the answer was wrong.
         quiz_score += 1
     else:
-        print("Incorrect.")
+        print("Unfortunately that's wrong.")
 
     # Thank the user for taking the quiz and share the score.
     print("Thanks for taking my quiz! Your score is...")
     time.sleep(5)
-    print(f"{str(quiz_score)}/5!")
+    print(f"{str(quiz_score)}/5.")
 
     # React differently based on the user's score.
     if quiz_score > 4:
