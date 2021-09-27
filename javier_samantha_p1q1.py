@@ -3,6 +3,8 @@
 # Quiz has 5 questions the user will answer.
 # It will keep track of score and give a final result.
 
+# This quiz will test the user on his/her knowledge of BTS, a KPop boy band.
+
 # Import the time module to make the quiz more dramatic!
 import time
 
