@@ -7,7 +7,6 @@
 
 # Import the time module to make the quiz more dramatic!
 import time
-from rich import print
 # The quiz_score variable will store the user's points.
 quiz_score = 0
 
