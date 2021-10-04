@@ -25,6 +25,7 @@ if start_quiz_answer.lower().strip(".?/!") in ["y", "yes"]:
     run_quiz = True
 elif start_quiz_answer.lower().strip(".?/!") in ["n", "no"]:
     run_quiz = False
+    print("Okay, see you later!")
 else:
     # If the user is not ready, do not run the quiz.
     run_quiz = False
