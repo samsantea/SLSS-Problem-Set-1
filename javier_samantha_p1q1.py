@@ -7,7 +7,7 @@
 
 # Import the time module to make the quiz more dramatic!
 import time
-
+from rich import print
 # The quiz_score variable will store the user's points.
 quiz_score = 0
 
@@ -30,72 +30,33 @@ else:
 
 # If the run quiz variable is True, the quiz will begin.
 while run_quiz:
-    print("Question #1!")
-    # Ask the question and create a variable to store the user's answer
-    anniversary_answer = input("What month is the anniversary of BTS?\n")
-
-    if anniversary_answer.lower() == "june":
-        # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("Correct!")
-        quiz_score += 1
-    else:
-        # Else, let the user know the answer was wrong.
-        print("Incorrect.")
-
-    print("Question #2!")
-    # Ask the question and create a variable to store the user's answer
-    youngest_answer = input("What is the first name of the youngest member in BTS?\n")
-
-    if youngest_answer.lower() == "jungkook":
-        # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("You're right!")
-        # Else, let the user know the answer was wrong.
-        quiz_score += 1
-    else:
-        print("Nope. If you didn't know already, he's one of the vocalists!")
-
-    print("Question #3!")
-    # Ask the question and create a variable to store the user's answer.
-    # This is a multiple choice question, so let the user know to type one of the letters to answer.
-    print("""What is the most recent song BTS released? Type one of the letters below:
+    # List of questions and answers
+    questions = [
+        ["What month is the anniversary of BTS? ", "june"],
+        ["What is the first name of the youngest member in BTS?", "jungkook"],
+        ["""What is the most recent song BTS released? Type one of the letters below:
     A: Butter
     B: Boy With Luv
     C: Permission to Dance
-    D: Dynamite""")
+    D: Dynamite""", "c"],
+        ["How many members are there in BTS?", "7"],
+        ["Finally, what is the English translation of BTS' full name?", "bulletproof boy scouts"]
+    ]
 
-    recent_song_answer = input()
+    # For each question, ask the question, get the user's answer, and check whether it is correct
+    for question in questions:
+        print(f"Question #{len(question) + 1}")
+        print(question[0])
 
-    if recent_song_answer.lower() == "c":
-        # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("You got it!")
-        # Else, let the user know the answer was wrong.
-        quiz_score += 1
-    else:
-        print("Sorry, that's not it.")
+        user_answer = input()
 
-    print("Question #4!")
-    # Ask the question and create a variable to store the user's answer
-    members_count_answer = input("How many members are there in BTS?\n")
-
-    if members_count_answer == "7":
-        # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("Yes!")
-        # Else, let the user know the answer was wrong.
-        quiz_score += 1
-    else:
-        print("No...")
-
-    print("Question #5. This is the final question!")
-    # Ask the question and create a variable to store the user's answer
-    name_meaning_answer = input("Finally, what is the English translation of BTS' full name?\n")
-
-    if name_meaning_answer.lower() == "bulletproof boy scouts":
-        # if the user's answer is correct, let him/her know and add a point to the quiz score.
-        print("Exactly!")
-        # Else, let the user know the answer was wrong.
-        quiz_score += 1
-    else:
-        print("Unfortunately that's wrong.")
+        # If it is correct, let the user know he/she was correct and add one to the quiz score
+        # Else, let the user know he/she was wrong
+        if user_answer.lower().strip(".?/!") == question[1]:
+            print("Correct!")
+            quiz_score += 1
+        else:
+            print("Incorrect.")
 
     # Thank the user for taking the quiz and share the score.
     print("Thanks for taking my quiz! Your score is...")
