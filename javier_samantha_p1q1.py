@@ -7,6 +7,7 @@
 
 # Import the time module to make the quiz more dramatic!
 import time
+
 # The quiz_score variable will store the user's points.
 quiz_score = 0
 
@@ -59,6 +60,7 @@ while run_quiz:
 
     # Thank the user for taking the quiz and share the score.
     print("Thanks for taking my quiz! Your score is...")
+
     time.sleep(5)
     print(f"{str(quiz_score)}/5 ({quiz_score / 5 * 100}%).")
 
