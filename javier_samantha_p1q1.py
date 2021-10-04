@@ -5,17 +5,21 @@
 
 # This quiz will test the user on his/her knowledge of BTS, a KPop boy band.
 
-# Import the time module to make the quiz more dramatic!
+# Import the time module and rich module to make the quiz more fancy!
+
 import time
+from rich import print
 
 # The quiz_score variable will store the user's points.
 quiz_score = 0
 
 # Greet the user and get the user's name.
-username = input(f"Good day! I'm the BTS quiz bot. What's your name?\n")
+print(f"Good day! I'm the BTS quiz bot. [bold red]What's your name?[/bold red]")
+
+username = input()
 
 # Introduce the quiz.
-print(f"Hello, {username}! I'm going to ask you a few questions about BTS today.\n")
+print(f"Hello, [bold red]{username}[/bold red]! I'm going to ask you a few questions about BTS today.")
 
 # Ask if the user is ready to start the quiz..
 start_quiz_answer = input("Are you ready for my quiz?\nY/N\n")
@@ -68,7 +72,7 @@ while run_quiz:
     time.sleep(5)
 
     # Share the quiz score.
-    print(f"{str(quiz_score)}/5 ({quiz_score / 5 * 100}%).")
+    print(f"[bold green]{str(quiz_score)}/5 ({quiz_score / 5 * 100}%)[/bold green].")
 
     # React differently based on the user's final score.
     if quiz_score > 4:
