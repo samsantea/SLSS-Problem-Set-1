@@ -20,10 +20,10 @@ print(f"Hello, {username}! I'm going to ask you a few questions about BTS today.
 # Ask if the user is ready to start the quiz..
 start_quiz_answer = input("Are you ready for my quiz?\nY/N\n")
 
-if start_quiz_answer.lower().strip(".?/!") in ["y", "yes"]:
+if start_quiz_answer.lower().strip(".,?/!") in ["y", "yes"]:
     # If the user says he/she is ready, run the quiz.
     run_quiz = True
-elif start_quiz_answer.lower().strip(".?/!") in ["n", "no"]:
+elif start_quiz_answer.lower().strip(".,?/!") in ["n", "no"]:
     run_quiz = False
     print("Okay, see you later!")
 else:
@@ -54,7 +54,7 @@ while run_quiz:
         user_answer = input()
 
         # If it is correct, let the user know he/she was correct and add one to the quiz score.
-        if user_answer.lower().strip(".?/!") == question[1]:
+        if user_answer.lower().strip(".,?/!") == question[1]:
             print("Correct!")
             quiz_score += 1
 
