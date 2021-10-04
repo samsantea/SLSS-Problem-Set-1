@@ -18,7 +18,7 @@ name = input(f"Good day! I'm the BTS quiz bot. What's your name?\n")
 print(f"Hello, {name}! I'm going to ask you a few questions about BTS today.\n")
 
 # Ask if the user is ready to start the quiz.
-start_quiz = input("Are you ready?\nY/N\n")
+start_quiz = input("Are you ready for my quiz?\nY/N\n")
 
 if start_quiz.lower() in ["y", "yes"]:
     # If the user says he/she is ready, run the quiz
@@ -45,23 +45,23 @@ while run_quiz:
 
     # For each question, ask the question, get the user's answer, and check whether it is correct
     for question in questions:
-        print(f"Question #{len(question) + 1}")
         print(question[0])
 
         user_answer = input()
 
         # If it is correct, let the user know he/she was correct and add one to the quiz score
-        # Else, let the user know he/she was wrong
         if user_answer.lower().strip(".?/!") == question[1]:
             print("Correct!")
             quiz_score += 1
+
+        # Else, let the user know he/she was wrong
         else:
             print("Incorrect.")
 
     # Thank the user for taking the quiz and share the score.
     print("Thanks for taking my quiz! Your score is...")
     time.sleep(5)
-    print(f"{str(quiz_score)}/5.")
+    print(f"{str(quiz_score)}/5 ({quiz_score / 5 * 100}%).")
 
     # React differently based on the user's score.
     if quiz_score > 4:
@@ -76,5 +76,6 @@ while run_quiz:
         print("At least you tried...")
     else:
         print("Do you even know who BTS is?")
+
     # End the run_quiz loop to finish the quiz and stop it from looping.
     run_quiz = False
