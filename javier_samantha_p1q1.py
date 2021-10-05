@@ -5,7 +5,7 @@
 
 # This quiz will test the user on his/her knowledge of BTS, a KPop boy band.
 
-# Import the time module and rich library to make the quiz more fancy!
+# Import the time module and rich module to make the quiz more fancy!
 
 import time
 from rich import print
