@@ -5,7 +5,9 @@
 
 # This quiz will test the user on his/her knowledge of BTS, a KPop boy band.
 
-# Import the time module and rich module to make the quiz more fancy!
+# Please use this with terminal or PyCharm's emulated terminal for the best results!
+
+# Import the time module and print module from the rich library to make the quiz more fancy!
 
 import time
 from rich import print
