@@ -55,7 +55,7 @@ while run_quiz:
 
     # For each question, ask the question, get the user's answer, and check whether it is correct.
     for question in questions:
-        print(question[0])
+        print(f"[italic purple]{question[0]}[/italic purple]")
 
         user_answer = input()
 
