@@ -2,9 +2,7 @@
 
 # Quiz has 5 questions the user will answer.
 # It will keep track of score and give a final result.
-
 # This quiz will test the user on his/her knowledge of BTS, a KPop boy band.
-
 # Please use this with terminal or PyCharm's emulated terminal for the best results!
 
 # Import the time module and print module from the rich library to make the quiz more fancy!
@@ -18,17 +16,19 @@ quiz_score = 0
 # Greet the user and get the user's name.
 print(f"Good day! I'm the BTS quiz bot. [bold red]What's your name?[/bold red]")
 
+# Get the user's input for the username.
 username = input()
 
-# Introduce the quiz.
+# Introduce the quiz and repeat the username.
 print(f"Hello, [bold red]{username}[/bold red]! I'm going to ask you a few questions about BTS today.")
 
-# Ask if the user is ready to start the quiz..
+# Ask if the user is ready to start the quiz. Store the user's answer.
 start_quiz_answer = input("Are you ready for my quiz?\nY/N\n")
 
 if start_quiz_answer.lower().strip(".,?/!") in ["y", "yes"]:
     # If the user says he/she is ready, run the quiz.
     run_quiz = True
+    print("Alright, let's begin!")
 elif start_quiz_answer.lower().strip(".,?/!") in ["n", "no"]:
     run_quiz = False
     print("Okay, see you later!")
